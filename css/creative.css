@@ -147,6 +147,20 @@ aside {
   }
 }
 
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../img/header.jpg');
+  text-align: center;
+  color: white;
+}
+
 header.devopsdays {
   position: relative;
   width: 100%;
@@ -161,19 +175,6 @@ header.devopsdays {
   color: white;
 }
 
-header {
-  position: relative;
-  width: 100%;
-  min-height: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background-image: url('../img/header.jpg');
-  text-align: center;
-  color: white;
-}
 header .header-content {
   position: relative;
   text-align: center;
@@ -197,7 +198,7 @@ header .header-content .header-content-inner p {
   margin-bottom: 50px;
 }
 @media (min-width: 768px) {
-  header {
+  header, header.devopsdays {
     min-height: 100%;
   }
   header .header-content {
