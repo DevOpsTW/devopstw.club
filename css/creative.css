@@ -146,6 +146,21 @@ aside {
     color: #F05F40;
   }
 }
+
+header.devopsdays {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../img/fb_cover_2000.png');
+  text-align: center;
+  color: white;
+}
+
 header {
   position: relative;
   width: 100%;
