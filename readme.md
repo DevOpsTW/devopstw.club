@@ -16,3 +16,5 @@
 - [Facebook 粉絲專頁](https://www.facebook.com/DevOpsTaiwan/)
 - [Facebook 社團](https://www.facebook.com/groups/DevOpsTaiwan/)
 - [社群入口網頁](https://devopstw.club)
+- [講題投稿](http://cfs.devopstw.club)
+- [贊助及合作提案](http://sponsor.devopstw.club)
