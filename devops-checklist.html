@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="DevOps Taiwan 社群獲得 DevOps Checklist 網站授權，將其翻譯為繁體中文。針對中文翻譯有任何建議，歡迎回饋或送 PR，謝謝">
+        <meta property="og:image" content="http://devopstw.club/img/fotos/5.jpg">
+        <meta property="og:url" content="http://devopstw.club">
+        <meta property="og:description" content="DevOps Taiwan 社群獲得 DevOps Checklist 網站授權，將其翻譯為繁體中文。針對中文翻譯有任何建議，歡迎回饋或送 PR，謝謝">
+        <meta property="og:site_name" content="DevOps Taiwan Community | DevOps 台灣社群 | DevOps Checklist">
+
+        <title>DevOps Taiwan Community | DevOps 台灣社群 | The DevOps Checklist</title>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+        <link rel="manifest" href="icon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+        <!-- Plugin CSS -->
+        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+        <!-- Theme CSS -->
+        <link href="css/creative.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+
+        .check-list li {
+          line-height: 200%;
+        }
+        </style>
+    </head>
+    <body id="page-top">
+      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                  </button>
+                  <a class="navbar-brand page-scroll" href="#page-top">DevOps 台灣社群</a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li>
+                          <a class="page-scroll" href="#about">關於我們</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#sponsor">參與社群</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#contact">相關連結</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#meetup">活動預告</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="http://cfs.devopstw.club">講題投稿</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="http://sponsor.devopstw.club">贊助與合作</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="https://effectivedevops.tw/">好文匯整</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="https://devopstw.club/devops-checklist.html">DevOps Checklist</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="https://github.com/DevOpsTW/AMA/issues">AMA</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="https://github.com/DevOpsTW/jobs/issues">Jobs</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="https://devopsdays.tw">DevOpsDays Taipei</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+      </nav>
+      <header>
+          <div class="header-content">
+              <div class="header-content-inner">
+                  <h1 id="homeHeading">DevOps Checklist</h1>
+                  <hr>
+                  DevOps Checklist 的版權屬於<a href="http://devopschecklist.com/">原網站</a>所有，DevOps Taiwan 社群已取得原網站授權得以翻譯並公開發佈繁體中文。
+              </div>
+          </div>
+      </header>
+      <section id="sponsor">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">Alignment</h2>
+                      <hr class="primary">
+                      <p class="description">統合團體與個人的方向及目標，讓組織航向超凡願景。</p>
+                  </div>
+                  <div>
+                    <ul class="check-list">
+                        <li class="check-item filter-item i1 culture">
+                            我們會根據業務目標（business objectives）決定任務的優先順序。
+                            </br><span class="more">DevOps is all about alignment. It was born out of frustration and trouble between the disparate priorities and incentives of Development and Operations teams. Alignment comes from unifying towards a common goal.</span>
+                            <ul class="tags">
+                                <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                            </ul>
+                        </li>
+                        <li class="check-item filter-item i2 culture">
+                                比起被動的任務分配，我們更傾向主動認領任務。
+                                </br><span class="more">Autonomy is a critical facet to motivation and job satisfaction. By allowing team members to self-select tasks, you'll see them work on what they're best suited to complete.</span>
+                                <ul class="tags">
+                                    <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                </ul>
+                        </li>
+                        <li class="check-item filter-item i3 culture measurement">
+                                我們的團隊擁有明確符合公司願景的團隊目標。
+                                <ul class="tags">
+                                    <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                    <li class="filter-item Measurement"><span class="label label-info">Measurement</span></li>
+                                </ul>
+                        </li>
+                        <li class="check-item filter-item i4 culture automation measurement">
+                                我們的產品團隊注重可永續的開發步調，而並非當下的速度。
+                                <ul class="tags">
+                                    <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                    <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                    <li class="filter-item Measurement"><span class="label label-info">Measurement</span></li>
+                                </ul>
+                        </li>
+                        <li class="check-item filter-item i5 culture measurement">
+                                比起在意系統可以正常運作多久不發生問題，我們更在意需要花費更少時間將問題修復。
+                                </br><span class="more">A great deal of software delivery theory actually stems from manufacturing. The major difference is that testing failure is faster, cheaper and non-destructive. Thus, we focus on early failure detection through automated testing, as far upstream as possible to catch issues before they become costly. We also focus on learning from simulating production failure by staging <a href="https://stripe.com/blog/game-day-exercises-at-stripe" target="_blank">'Game Days'</a>, <a href="http://www.pagerduty.com/blog/failure-friday-at-pagerduty/" target="_blank">'Failure Fridays'</a> and optimizing reaction time and corrective process.</span>
+                                <ul class="tags">
+                                    <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                    <li class="filter-item Measurement"><span class="label label-info">Measurement</span></li>
+                                </ul>
+                        </li>
+                        <li class="check-item filter-item i6 culture">
+                                在我們的組織當中，DevOps 並非是某個被分別出來的角色。
+                                </br><span class="more">Hiring a 'DevOps engineer' is an antipattern because it charges an individual with understanding and operating in two worlds with their respective opposing incentives, while remaining independent of either, as their own silo. Even more confusing is reconciling that position with a larger organizational DevOps pursuit. Hiring an Automation, Systems, Operations or Development engineer specifically, or just simply an engineer would be more humane and doesn't require you to write a manifesto for your job descriptions. For more info on hiring for DevOps, see <a href="http://www.oreilly.com/webops-perf/free/devops-hiring.csp">O'Reilly's free book.</a></span>
+                                <ul class="tags">
+                                    <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                </ul>
+                        </li>
+                        <li class="check-item filter-item i7 culture">
+                                在我們的組織當中，DevOps 也並非是某個被分別出來的團隊。
+                                </br><span class="more">DevOps works best as a cross-functional team focus. Large organizations have often seen success with an exploratory task force team or a greenfield project team, but in order to get optimal results every team should be able to build and deliver without relying on another department. Vote no on silos!</span>
+                                <ul class="tags">
+                                    <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                </ul>
+                        </li>
+                        <li class="check-item filter-item i8 culture">
+                                對我們而言，「維運」（Operations）功效也同樣被視為是組織競爭優勢的來源之一。
+                                </br><span class="more">A large part of why DevOps exists is in reaction to common perceptions of IT as a cost to an organization, yet we now know it can just as easily be a source of innovation.</span>
+                                <ul class="tags">
+                                    <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                </ul>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+                <section id="sponsor">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2 class="section-heading">Context</h2>
+                                <hr class="primary">
+                                <p class="description">提供相關資訊給隨時有需要的人。</p>
+                            </div>
+                            <div>
+                              <ul class="check-list">
+                                  <li class="check-item filter-item i9 culture sharing">
+                                          在開發團隊的衝刺規劃會議（Sprint Planning ）中，維運團隊的代表也被邀請參與其中。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i10 culture sharing">
+                                          我們讓產品團隊的所有成員都能看到潛在的改變（變革）。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i11 culture sharing">
+                                          我們擁有一個自動化的系統來執行任務，並且能夠透過團隊的即時通訊工具接收到相關的通知。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i12 culture sharing">
+                                          在設計系統時，我們定期與審計和監管單位（部門）諮詢並尋求指導。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i13 culture sharing">
+                                          我們鼓勵團隊針對任務及其優先順序提出質疑。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i14 sharing">
+                                          我們擁有一個集中的即時通訊系統，並且產品團隊的所有成員都加入在其中。
+                                          <ul class="tags">
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i15 sharing measurement">
+                                          產品團隊的所有成員都擁有權限可以存取環境狀態、相關指標和歷史紀錄。
+                                          <ul class="tags">
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                              <li class="filter-item measurement"><span class="label label-info">Measurement</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i16 sharing measurement">
+                                          產品團隊的所有成員都擁有權限可以存取程式碼的狀態、相關指標和歷史紀錄。
+                                          <ul class="tags">
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                              <li class="filter-item measurement"><span class="label label-info">Measurement</span></li>
+                                          </ul>
+                                  </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sponsor">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2 class="section-heading">Learning</h2>
+                                <hr class="primary">
+                                <p class="description">藉由「持續改善」（Continuous Improvement）來強化個人成長和培養團隊的相互理解。</p>
+                            </div>
+                            <div>
+                              <ul class="check-list">
+                                  <li class="check-item filter-item i17 culture">
+                                          我們在組織當中陶冶一種持續學習的環境。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i18 culture">
+                                        我們會定期為了團隊所獲得的學習與成功而慶祝。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i19 culture sharing">
+                                          我們會定期與我們組織的其他夥伴分享我們產品團隊的學習和成功。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i20 culture sharing measurement">
+                                          我們公開討論過失，藉此共同學習。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                              <li class="filter-item measurement"><span class="label label-info">Measurement</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i21 culture measurement">
+                                          我們能夠識別必需的技能並改進之以應對未來目標。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item measurement"><span class="label label-info">Measurement</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i22 culture measurement">
+                                          我們會長期不畏艱難地持續檢視我們是如何完成我們的工作，以及我們又是如何有效地完成工作。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item measurement"><span class="label label-info">Measurement</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i23 measurement">
+                                          我們所進行的預估、推估是建立於度量及過往歷史經驗的基礎之上。
+                                          <ul class="tags">
+                                              <li class="filter-item measurement"><span class="label label-info">Measurement</span></li>
+                                          </ul>
+                                  </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sponsor">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2 class="section-heading">Lifecycle</h2>
+                                <hr class="primary">
+                                <p class="description">在日新又新的生態系中，專注於軟體上，並將其視為是值得關照、關注和深思的產品。</p>
+                            </div>
+                            <div>
+                              <ul class="check-list">
+                                  <li class="check-item filter-item i24 culture">
+                                          我們的軟體開發週期為2週，或少於2週。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i25 culture measurement">
+                                          我們的軟體開發週期是以將能正常運作之軟體異動發佈，並部署至正式運行環境來界定的。
+                                          </br><span class="more">Iterative development and process optimization depends on repeatedly performing the critical functions of building and deploying software. The more it's done, the better it's understood, the easier it is to improve and automate.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item measurement"><span class="label label-info">Measurement</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i26 culture">
+                                          我們一旦發現缺陷，會先暫停開發工作，評估缺陷以決定修復它的優先順序
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i27 culture automation">
+                                          開發人員或產品負責人（product owner）都能夠將我們的產品部署到正式運行環境。
+                                          </br><span class="more">The focus here is empowering the most informed to perform the task. Someone intimately familiar with a change is best positioned to evaluate its performance and correctness. Developers and POs should be empowered to measure and visualize the operation of the change as well, in order to give them a holistic view of the changed system.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i28 automation testing">
+                                          在自動化部署至正式運行環境之前，我們都有進行自動化測試。
+                                          </br><span class="more">Production deploys can still be manually initiated in cases where a signoff is required, yet the testing, deployment process and validation should be entirely automated to ensure consistency, accuracy and optimal speed. Automating deploys means no copy and paste, less security risk, more auditability, more confidence.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i29 automation">
+                                          我們的系統組態（configuration）設定是自動化的。
+                                          </br><span class="more">Friends don't let friends manually configure systems.</span>
+                                              <ul class="tags">
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i30 automation">
+                                          我們所部署的系統組態（system configuration）是不可變的（immutable）。
+                                          </br><span class="more">Immutability is an ideal state as it allows operations to focus on optimizing consistent and predictable systems.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i31 automation testing">
+                                          我們發佈和部署的自動化沒有被環境綁定。
+                                          </br><span class="more">To avoid fragmentation or repetition, it's best to limit environmental differences to variable values only.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sponsor">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2 class="section-heading">Organization</h2>
+                                <hr class="primary">
+                                <p class="description">提供一個具備互動與凝聚力的組織架構，作為協作與生產力（工作效率）的後盾。</p>
+                            </div>
+                            <div>
+                              <ul class="check-list">
+                                  <li class="check-item filter-item i32 culture sharing">
+                                          我們擁有的領域專業知識與經驗並不會只侷限在某些人員身上。
+                                          </br><span class="more">If you're lucky, you're surrounded by experts. Ideally, they're not just islands of knowledge and responsibility, but part of a peer group within the organization.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i33 culture sharing testing">
+                                          針對異動（changes），我們允許進行跨部門或同儕之間的審查（review）
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i34 culture">
+                                          我們的組織是圍繞著跨職能團隊進行配置的。
+                                          </br><span class="more">Cross-functional teams are more empowered to build and deploy their own software without being hindered by constraints. They also avoid an 'us vs them' effect of siloed functional teams, learn from, and foster awareness and empathy for eachothers priorities and interests.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i35 culture">
+                                          我們的團隊是以客戶和產品為導向的。
+                                          </br><span class="more">Customer focus helps align teams towards valuable goals, and keeps development and engineering zeroed in on delivery and processing feedback.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i36 culture sharing">
+                                          我們會定期審查（review）優先事項。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i37 automation testing">
+                                          我們的開發人員能夠自助自理在類正式運行的系統上工作並進行測試。
+                                          <ul class="tags">
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i38 automation testing">
+                                          我們的開發人員能夠自助使用類正式運行環境的資料（數據）進行工作與測試。
+                                          <ul class="tags">
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i39 automation testing">
+                                          我們的開發人員能夠自助存取在建置和測試軟體時所需的一切相依性（dependencies）。
+                                          <ul class="tags">
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sponsor">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2 class="section-heading">Process</h2>
+                                <hr class="primary">
+                                <p class="description">擁有精心打造的儀式（老規矩），培養一貫與信心，能夠為持續改善提供一個框架。</p>
+                            </div>
+                            <div>
+                              <ul class="check-list">
+                                  <li class="check-item filter-item i40 culture">
+                                          我們的組織遵循敏捷開發實踐。（Agile Development）
+                                          </br><span class="more">To realize the full power of a focus on DevOps, feedback and regular iteration are critical. <a href="http://www.agileweboperations.com/lean-agile-devops-related" target="_blank">DevOps is built on agile.</a></span>
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i41 culture sharing">
+                                          我們已在團隊內實行「不咎責的事後檢討」（blameless postmortems）
+                                          </br><span class="more">Focus on learning and continual improvement. This is the human equivalent of focusing on MTTR vs MTBF. Read: <a href="https://codeascraft.com/2012/05/22/blameless-postmortems/" target="_blank">John Allspaw's great article on Etsy's process</a></span>
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i42 culture measurement">
+                                          我們定期檢查軟體交付過程中的各種限制。
+                                          <ul class="tags">
+                                              <li class="filter-item culture"><span class="label label-info">Culture</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i43 automation testing">
+                                          我們的系統組態（system configuration）有進行版本控制。
+                                          <ul class="tags">
+                                              <li class="filter-item automation"><span class="label label-info">Automation</span></li>
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i44 sharing">
+                                          我們的文件（documentation）有進行版本控制，並且是團隊共享的。
+                                          <ul class="tags">
+                                              <li class="filter-item sharing"><span class="label label-info">Sharing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i45 sharing">
+                                          我們會維護一份任務待辦清單，所有團隊成員都可以查看並提供意見與評論。
+                                          <ul class="tags">
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i46 testing">
+                                          我們已在團隊內實行 TDD 或 BDD
+                                          <ul class="tags">
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i47 testing">
+                                          我們會將程式碼（支線）合併到主線來測試我們的異動
+                                          </br><span class="more">Until you prove your code isn't a destructive regression, it shouldn't be deployed for someone else to discover. Automated testing and frequent merging should catch most of these issues, and make sure you don't find out about problems from someone else - or worse, Twitter.</span>
+                                          <ul class="tags">
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                                  <li class="check-item filter-item i48 testing">
+                                          我們會比照正式運行環境的負載量以及使用模式，來測試我們的軟體更動
+                                          <ul class="tags">
+                                              <li class="filter-item testing"><span class="label label-info">Testing</span></li>
+                                          </ul>
+                                  </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="meetup" class="bg-primary">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                              <p class="thank-you">
+                              關於這份 DevOps Checklist 有任何的想法與回饋，您可以直接回覆給<a style="color: #FFF; text-decoration: underline" href="http://devopschecklist.com/">原網站</a>之連絡信箱 checklist@myplanet.com。如針對中文翻譯有任何意見，歡迎<a style="color: #FFF; text-decoration: underline" href="https://github.com/DevOpsTW/devopstw.club">回饋或發送 PR 給 DevOps Taiwan 社群</a>，謝謝！
+                            </p>
+                              <h2>References</h2>
+                                <p><a style="color: #FFF; text-decoration: underline" href="https://www.youtube.com/watch?v=LdOe18KhtT4" target="_blank">10+ Deploys a Day: Dev and Ops Cooperation at Flickr</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="http://www.thoughtworks.com/continuous-integration" target="_blank">Continuous Integration</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="http://continuousdelivery.com" target="_blank">Continuous Delivery</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="http://itrevolution.com/books/phoenix-project-devops-book" target="_blank">The Phoenix Project</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="http://devopsdays.org" target="_blank">DevOpsDays Conferences</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="http://devopsweekly.com" target="_blank">DevOps Weekly</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="http://scrumguides.org" target="_blank">Scrum Guides</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="http://ixdchecklist.com" target="_blank">Myplanet's IxD Checklist</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="http://www.partnersforlearning.com/questions.php" target="_blank">Dimensions of the Learning Organization</a></p>
+                                <p><a style="color: #FFF; text-decoration: underline" href="https://www.deming.org/theman/theories/fourteenpoints" target="_blank">Deming's Fourteen Points of Management</a></p>
+                              <p>DevOps Checklist 的版權屬於<a style="color: #FFF; text-decoration: underline" href="http://devopschecklist.com/">原網站</a>所有，DevOps Taiwan 社群已取得原網站授權得以翻譯並公開發佈繁體中文。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    </body>
+</html>
