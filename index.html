@@ -56,6 +56,24 @@
 </head>
 
 <body id="page-top">
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your customer chat code -->
+  <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="1442999589110266"
+    theme_color="#4e66a2"
+    logged_in_greeting="歡迎來到 DevOps Taiwan 社群！有什麼需要與志工群聯繫的事項嗎？（投稿、贊助、合作）"
+    logged_out_greeting="歡迎來到 DevOps Taiwan 社群！有什麼需要與志工群聯繫的事項嗎？（投稿、贊助、合作）">
+  </div>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
