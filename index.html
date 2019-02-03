@@ -2,6 +2,16 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133680862-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-133680862-1');
+    </script>
+
+
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,6 +68,36 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&subset=chinese-traditional');
 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+       .pointer  img {
+            display: inline-block;
+            animation: myfirst 0.5s infinite;
+        }
+        
+        .pointer {
+            width: 50%;
+            text-align: center;
+        }
+
+        @keyframes myfirst {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(0px, -10px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+
+
+
         .container, .row{
             width: 100% !important;
             max-width: unset;
@@ -69,7 +109,6 @@
         }
 
         #ad_video, #ad_word{
-            margin-top: 10%; 
             float: left;
         }
 
@@ -223,7 +262,6 @@ footer{
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  line-height: 2.71;
   letter-spacing: normal;
   color: #f76e10;
   margin-bottom: 0;
@@ -263,12 +301,18 @@ footer{
     .service-block p{
         font-size: 12px;
     }
+    .main-title{
+        font-size: 17px;
+    }
 
-    /* .service-block button{
-        width: 140%;
-    position: absolute;
-    left: -36%;
-    } */
+    .sub-title{
+        font-size: 13px;
+    }
+
+    .navbar-brand img {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 
@@ -297,17 +341,27 @@ footer{
                     <a class="nav-link" href="#">活動消息</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">關於我們</a>
+                    <a class="nav-link" href="#about">關於我們</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">歷史沿革</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">徵才資訊</a>
+                    <a class="nav-link" href="https://github.com/DevOpsTW/jobs/issues">徵才資訊</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">其他相關</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        其他相關
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="http://cfs.devopstw.club/">講題投稿</a>
+                        <a class="dropdown-item" href="http://sponsor.devopstw.club/">贊助與合作</a>
+                        <a class="dropdown-item" href="https://devopstw.club/devops-checklist.html">DEVOPS CHECKLIST</a>
+                        <a class="dropdown-item" href="https://devopsdays.tw/">DEVOPS DAYS TAIPEI</a>
+                    </div>
                 </li>
+
             </ul>
         </div>
     </nav>
@@ -321,7 +375,7 @@ footer{
                             <span class="badge badge-pill badge-primary link-badge">英雄榜</span>
                             <span class="badge badge-pill badge-primary link-badge">DEVOPS工具大亂鬥</span>
                             <span class="badge badge-pill badge-primary link-badge">志工戰隊</span>
-                            </h4>
+                        </h4>
 
                     </div>
                     <hr class="orange_hr no-moblie">
@@ -336,34 +390,34 @@ footer{
                     <h4>最新預吿</h4>
                     <hr class="orange_hr">
                     <div class="activity">
-                        <h5>【2019/03/03】 Devops工具大亂鬥 <span class="badge badge-pill new-badge">New</span></h4>
-                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                        <h5>【2019/03/28】DevOps Taiwan Meetup #22 <span class="badge badge-pill new-badge">New</span></h4>
+                        <p>Artifacts Management</p>
                     </div>
 
                     <div class="activity">
-                        <h5>【2019/03/03】 Devops工具大亂鬥 <span class="badge badge-pill new-badge">New</span></h4>
-                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                        <h5>【2019/04】 DevOps Taiwan Meetup #23 <span class="badge badge-pill new-badge">New</span></h4>
+                        <p>DataOps</p>
                     </div>
 
                     <div class="activity">
-                        <h5>【2019/03/03】 Devops工具大亂鬥 <span class="badge badge-pill new-badge">New</span></h4>
-                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                        <h5>【2019/05】 DevOps Taiwan Meetup #24  <span class="badge badge-pill new-badge">New</span></h4>
+                        <p>Feature Toggle</p>
                     </div>
 
                     <div class="activity">
-                        <h5>【2019/03/03】 Devops工具大亂鬥 <span class="badge badge-pill new-badge">New</span></h4>
-                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                        <h5>【每雙週四的夜間】 SRE 讀書會 (台北) <span class="badge badge-pill new-badge">New</span></h4>
+                        <p>想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
                     </div>
                     <div align="right">
                         <a href="#" class="activity-anchor">更多活動...</a>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <h2 class="about-us">關於我們 DEVOPS TAIWAN</h2>
-                    
+
                 </div>
             </div>
         </div>
@@ -373,6 +427,8 @@ footer{
         <div class="container">
             <div class="row">
                 <div class="col" align="center">
+                    <div class="pointer"><img src="./img/point-down.png"></div>
+
                     <img src="./img/devop-t.png" class="img-fuild devops-img">
                 </div>
             </div>
@@ -541,15 +597,16 @@ footer{
                     <h4>站內連結</h4>
                     <p class="footer-link">關於我們</p>
                     <p class="footer-link">歷史沿革</p>
-                    <p class="footer-link">徵才資訊</p>
+                    <p class="footer-link"><a class="footer-anchor" href="https://github.com/DevOpsTW/jobs/issues">徵才資訊</a></p>
                     <p class="footer-link">活動消息</p>
                 </div>
                 <div class="col-12 col col-md-4">
                     <h4>其他相關連結</h4>
-                    <p class="footer-link">講題投稿</p>
-                    <p class="footer-link">贊助與合作</p>
-                    <p class="footer-link">DEVOPS CHECKLIST</p>
-                    <p class="footer-link">DEVOPS DAYS TAIPEI</p>
+                    <p class="footer-link"><a class="footer-anchor" href="http://cfs.devopstw.club/">講題投稿</a></p>
+                    <p class="footer-link"><a class="footer-anchor" href="http://sponsor.devopstw.club/">贊助與合作</a></p>
+                    <p class="footer-link"><a class="footer-anchor" href="https://devopstw.club/devops-checklist.html">DEVOPS
+                            CHECKLIST</a></p>
+                    <p class="footer-link"><a class="footer-anchor" href="https://devopsdays.tw/">DEVOPS DAYS TAIPEI</a></p>
                 </div>
                 <div class="col-12 col col-md-4">
                     <h4>社群媒體</h4>
