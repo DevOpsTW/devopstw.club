@@ -147,7 +147,7 @@ aside {
   }
 }
 
-header {
+/* header {
   position: relative;
   width: 100%;
   min-height: auto;
@@ -156,10 +156,10 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
+  background-image: url('../img/header.jpg'); 
   text-align: center;
   color: white;
-}
+} */
 
 header.devopsdays {
   position: relative;

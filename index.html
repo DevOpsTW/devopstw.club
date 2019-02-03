@@ -33,7 +33,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <!-- <link href="css/creative.css" rel="stylesheet"> -->
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -85,16 +85,207 @@
 {
     transition: all 1s ease;
 }
+    .hot-link{
 
-    </style>
+    }
+
+    .orange_hr{
+        background-color: #f76e10;
+        max-width: 100%;
+    }
+    .link-badge{
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #ffffff;
+  background-color: #5bc0de;
+}
+header{
+    background-color: #555555;
+    color: white;
+    text-align: center;
+}
+
+#meetup{
+    background-color: #555555;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.meetup-heading{
+    color: white;
+}
+
+#about{
+    background-image: url('./img/header.jpg'); 
+    background-size: 100% 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#service{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right:  50px;
+}
+
+#portfolio{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right:  50px;
+}
+
+.footer-link{
+    padding-top: 29px;
+    font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+}
+
+footer{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right:  50px;
+}
+.footer-anchor{
+    color: white;
+}
+
+.footer-anchor:hover{
+    color: #f76e10;
+}
+
+.activity-anchor{
+    color: #f76e10;
+}
+
+.activity-anchor:hover{
+    color: #f76e10;
+}
+.service-block{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.service-block p{
+    font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #373a3c;
+}
+
+.btn-devops{
+    background-color: #ec971f;
+    color: white;
+}
+
+.about-us{
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.new-badge{
+    background-color: #f76e10;
+    color: white;
+    border-radius: 4px;
+}
+
+.activity span.new-badge{
+    margin-left: 15px;
+}
+
+
+.main-title{
+    font-size: 34px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  color: #535455;
+  margin-bottom: 0;
+}
+
+.sub-title{
+    font-size: 17px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.71;
+  letter-spacing: normal;
+  color: #f76e10;
+  margin-bottom: 0;
+}
+
+.nav-item{
+    font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #373a3c;
+}
+
+@media (max-width: 542px) {
+    .no-moblie{
+    display: none;
+}
+
+    .devops-img{
+        width: 263px;
+    }
+
+    .devops-icon{
+        width: 80px;
+    }
+
+    #service{
+        padding: unset;
+    }
+
+    .service-block h2{
+        font-size: 17px;
+    }
+
+    .service-block p{
+        font-size: 12px;
+    }
+
+    /* .service-block button{
+        width: 140%;
+    position: absolute;
+    left: -36%;
+    } */
+}
+
+
+
+
+</style>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#page-top">
-            <img src="./img/nav_icon.png" width="40" height="40" class="d-inline-block" alt="">
-            DevOps 臺灣
+            <img src="./img/nav_icon.png" width="80" height="80" class="d-inline-block" alt="">
+        </a>
+        <a class="navbar-brand">
+            <p class="main-title">DEVOPS TAIWAN</p>
+            <p class="sub-title">持續整合 優秀人才</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -103,21 +294,19 @@
         <div class="collapse navbar-collapse" style="justify-content: flex-end;">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <a class="nav-link" href="#">活動消息</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">關於我們</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">活動預告</a>
+                    <a class="nav-link" href="#">歷史沿革</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        相關連結
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">徵才資訊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">其他相關</a>
                 </li>
             </ul>
         </div>
@@ -125,82 +314,118 @@
 
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-12">
+            <div class="row mb-3" style="padding-top: 33px;">
+                <div class="col-md-6 col-12" align="left">
+                    <div class="hot-link no-moblie">
+                        <h4>熱門連結
+                            <span class="badge badge-pill badge-primary link-badge">英雄榜</span>
+                            <span class="badge badge-pill badge-primary link-badge">DEVOPS工具大亂鬥</span>
+                            <span class="badge badge-pill badge-primary link-badge">志工戰隊</span>
+                            </h4>
+
+                    </div>
+                    <hr class="orange_hr no-moblie">
+
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe id="ad_video" width="400" height="300" src="https://www.youtube.com/embed/hGxdAx7I-Ds?autoplay=1"
                             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             class="embed-responsive-item"></iframe>
                     </div>
                 </div>
-                <div class="col-md-6 col-12">
-                    <div id="ad_word" align="left">
-                        <h1>DevOps Taiwan 的願景</h1>
-                        <p>透過 DevOps 的價值觀與落實，交付我們開發與維運團隊的價值</p>
-                        <hr class="light">
-                        <div align="center">
-                            <a href="https://www.facebook.com/groups/DevOpsTaiwan/" class="page-scroll btn btn-default btn-xl sr-button">加入我們</a>
-                        </div>
+                <div class="col-md-6 col-12 no-moblie" align="left">
+                    <h4>最新預吿</h4>
+                    <hr class="orange_hr">
+                    <div class="activity">
+                        <h5>【2019/03/03】 Devops工具大亂鬥 <span class="badge badge-pill new-badge">New</span></h4>
+                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
                     </div>
+
+                    <div class="activity">
+                        <h5>【2019/03/03】 Devops工具大亂鬥 <span class="badge badge-pill new-badge">New</span></h4>
+                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                    </div>
+
+                    <div class="activity">
+                        <h5>【2019/03/03】 Devops工具大亂鬥 <span class="badge badge-pill new-badge">New</span></h4>
+                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                    </div>
+
+                    <div class="activity">
+                        <h5>【2019/03/03】 Devops工具大亂鬥 <span class="badge badge-pill new-badge">New</span></h4>
+                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                    </div>
+                    <div align="right">
+                        <a href="#" class="activity-anchor">更多活動...</a>
+                    </div>
+                    
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="./img/devopscycle.png" class="img-fuild" width="700">
+                    <h2 class="about-us">關於我們 DEVOPS TAIWAN</h2>
+                    
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="service">
+    <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">我們在做什麼</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>舉辦活動</h3>
-                        <p class="text-muted">我們定期舉辦像是 DevOps 的讀書會、MeetUp 以及一年一度的大型 WorkShop 等，讓你透過這些活動了解 DevOps
-                            ，並且為你的職涯增進實力！</p>
-                        <!-- <hr>
-                            <p class="text-muted"><a href="http://sponsor.devopstw.club">聯絡表單</a></p> -->
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-group text-primary sr-icons"></i>
-                        <h3>翻譯書籍</h3>
-                        <p class="text-muted">我們社群的志工會一同翻譯相關書籍，將國外的經典書籍翻譯成中文，加速 DevOps 相關知識在臺灣生根</p>
-                        <!-- <hr>
-                            <p class="text-muted"><a href="https://www.facebook.com/DevOpsTaiwan/">與志工聯繫</a></p> -->
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-refresh text-primary sr-icons"></i>
-                        <h3>DevOps 經驗分享</h3>
-                        <p class="text-muted">我們社群的志工熱衷於任何相關講題、經驗分享，不論規模大小，社群的價值正是這些經驗的交流與互動！</p>
-                        <!-- <hr>
-                            <p class="text-muted"><a href="http://cfs.devopstw.club">投稿表單</a></p> -->
-                    </div>
+                <div class="col" align="center">
+                    <img src="./img/devop-t.png" class="img-fuild devops-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="meetup" class="bg-primary" class="">
+
+    <section id="service">
+        <div class="container">
+            <div class="row service-block">
+                <div class="col-3">
+                    <img src="./img/block-1.png" class="img-fuild devops-icon">
+                </div>
+                <div class="col-9">
+                    <h2>組織戰隊</h2>
+                    <p>Devops Taiwan 集結各界好手，組織志工、人才戰隊，翻譯經典著作、進行各項議題研討，培養經驗與戰鬥力，當然還不忘帶著歡樂積極的態度！</p>
+                    <p>歡迎你一起加入 「DevopsT 戰隊」</p>
+                    <button type="button" class="btn btn-warning btn-devops">加入戰隊</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row service-block">
+                <div class="col-9" align="right">
+                    <h2>活動發起</h2>
+                    <p>由 DevopsT 戰隊共同發起各種知識與樂趣兼具的活動，帶動Devops的精神，並且促進業界交流，共同凝聚人才分享、協作，持續整合！</p>
+                    <button type="button" class="btn btn-warning btn-devops">一同發起</button>
+                </div>
+                <div class="col-3">
+                    <img src="./img/block-2.png" class="img-fuild devops-icon">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row service-block">
+                <div class="col-3">
+                    <img src="./img/block-3.png" class="img-fuild devops-icon">
+                </div>
+                <div class="col-9">
+                    <h2>多元合作結盟-持續整合 優秀人才</h2>
+                    <p>透過 DevopsT 戰隊的戰力培養、蓄積實力，吸引及邀請更多好手強強合作，為台灣 IT 產業創造更多元、豐富的價值！</p>
+                    <p>邀請你一起參與各項提案、文章撰寫、贊助，「多元合作結盟」強強聯手！</p>
+                    <button type="button" class="btn btn-warning btn-devops">馬上強強聯手</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="meetup">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h2 class="section-heading">活動預告</h2>
-                    <hr class="primary">
+                    <h2 class="meetup-heading">活動及花絮</h2>
                 </div>
             </div>
         </div>
@@ -224,7 +449,7 @@
                                         <h5 class="card-title">SRE 讀書會 (台北)</h5>
                                         <p class="card-text">想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
                                         <p class="card-text"><small class="text-muted">平均每雙週四的夜間有讀書會</small></p>
-                                        <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a>
+                                        <a href="http://fb.sre.tw" class="btn btn-warning btn-devops">加入SRE臉書社團了解詳情</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -233,7 +458,7 @@
                                         <h5 class="card-title">DevOps Taiwan Meetup #20</h5>
                                         <p class="card-text">持續測試，如果我可以重來一次</p>
                                         <p class="card-text"><small class="text-muted">2019/01/21 晚上（台北）</small></p>
-                                        <!-- <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a> -->
+                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -242,7 +467,7 @@
                                         <h5 class="card-title">DevOps Taiwan Meetup #21</h5>
                                         <p class="card-text">Cloud Native 最新近況分享</p>
                                         <p class="card-text"><small class="text-muted">預定 2019/02/14 晚上 (台北)</small></p>
-                                        <!-- <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a> -->
+                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +480,7 @@
                                         <h5 class="card-title">DevOps Taiwan Meetup #22</h5>
                                         <p class="card-text">Artifacts Management</p>
                                         <p class="card-text"><small class="text-muted">預定 2019/03/28 晚上 (台北)</small></p>
-                                        <!-- <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a> -->
+                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -264,7 +489,7 @@
                                         <h5 class="card-title">DevOps Taiwan Meetup #23</h5>
                                         <p class="card-text">DataOps</p>
                                         <p class="card-text"><small class="text-muted">四月預定 (台北)</small></p>
-                                        <!-- <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a> -->
+                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -273,149 +498,74 @@
                                         <h5 class="card-title">DevOps Taiwan Meetup #24</h5>
                                         <p class="card-text">Feature Toggle</p>
                                         <p class="card-text"><small class="text-muted">五月預定 (台北)</small></p>
-                                        <!-- <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a> -->
+                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="card-deck carousel-item active">
-                            <div class="card">
-                                <img src="./img/fotos/6.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">SRE 讀書會 (台北)</h5>
-                                    <p class="card-text">想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
-                                    <p class="card-text"><small class="text-muted">平均每雙週四的夜間有讀書會</small></p>
-                                    <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="./img/fotos/5.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">DevOps Taiwan Meetup #20</h5>
-                                    <p class="card-text">持續測試，如果我可以重來一次</p>
-                                    <p class="card-text"><small class="text-muted">2019/01/21 晚上（台北）</small></p>
-                                     <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="./img/fotos/5.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">DevOps Taiwan Meetup #21</h5>
-                                    <p class="card-text">Cloud Native 最新近況分享</p>
-                                    <p class="card-text"><small class="text-muted">預定 2019/02/14 晚上 (台北)</small></p>
-                                    <a href="http://fb.sre.tw" class="btn btn-primary">加入SRE臉書社團了解詳情</a>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- <section class="bg-primary" id="about">
+    <section id="portfolio" class="no-moblie">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">關於我們</h2>
-                    <p>DevOps Taiwan 社群成立于 2015/5/21，由多位關注 DevOps 相關資訊的 IT、軟體界朋友一起共同創立，期望透過社群互動的方式建立一個平台提供台灣的社群朋友可以一起針對
-                        DevOps 相關的議題、專案、技術與工作進行分享與交流。</p>
-                    <hr class="light">
-                    <p>社群目前主要活動於 Facebook 社團</p>
-                    
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/fotos/1.jpg" class="img-responsive" width="388">
                 </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <section class="no-padding" id="portfolio">
-            <div class="container-fluid">
-                <div class="row no-gutter popup-gallery">
-                    <div class="col-lg-4 col-sm-6">
-                        <img src="img/fotos/1.jpg" class="img-responsive" alt="">
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <img src="img/fotos/2.jpg" class="img-responsive" alt="">
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <img src="img/fotos/3.jpg" class="img-responsive" alt="">
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <img src="img/fotos/4.jpg" class="img-responsive" alt="">
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <img src="img/fotos/5.jpg" class="img-responsive" alt="">
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <img src="img/fotos/6.jpg" class="img-responsive" alt="">
-                    </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/fotos/2.jpg" class="img-responsive" width="388">
                 </div>
-            </div>
-        </section> -->
-
-    <!--  -->
-    <section id="sponsor">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">我分享，故我在！社群需要您的參與！</h2>
-                    <hr class="primary">
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/fotos/3.jpg" class="img-responsive" width="388">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>贊助及合作提案</h3>
-                        <p class="text-muted">社群活動需要支持才能持續向前推行，若您個人、組織或企業願意贊助社群活動，歡迎與志工聯繫，我們在此先向您表達感謝！或若是您有任何合作計畫希望與
-                            DevOps Taiwan 合作的，也歡迎與我們聯繫，謝謝！</p>
-                        <hr>
-                        <p class="text-muted"><a href="http://sponsor.devopstw.club">聯絡表單</a></p>
-                    </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/fotos/4.jpg" class="img-responsive" width="388">
                 </div>
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-group text-primary sr-icons"></i>
-                        <h3>志工</h3>
-                        <p class="text-muted">如果你對於社群活動充滿熱誠，願意義務付出您的時間、腦力與勞力，歡迎與我們聊聊！</p>
-                        <hr>
-                        <p class="text-muted"><a href="https://www.facebook.com/DevOpsTaiwan/">與志工聯繫</a></p>
-                    </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/fotos/5.jpg" class="img-responsive" width="388">
                 </div>
-                <div class="col-lg-4 col-md-4 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-refresh text-primary sr-icons"></i>
-                        <h3>經驗分享</h3>
-                        <p class="text-muted">任何相關講題、經驗分享，不論規模大小，即便是小小的踩雷經驗，都歡迎您與社群朋友分享，別忘了社群的價值正是這些經驗的交流與互動！</p>
-                        <hr>
-                        <p class="text-muted"><a href="http://cfs.devopstw.club">投稿表單</a></p>
-                    </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/fotos/6.jpg" class="img-responsive" width="388">
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" style="background: #45454e; color:#ffffff">
+    <footer id="contact" style="background: #555; color:#ffffff">
         <div class="container">
             <div class="row">
-                <div class="col-12" align="center">
-                    <h2 class="section-heading">相關連結</h2>
-                    <hr class="primary">
+                <div class="col-12 col-md-4  no-moblie">
+                    <h4>站內連結</h4>
+                    <p class="footer-link">關於我們</p>
+                    <p class="footer-link">歷史沿革</p>
+                    <p class="footer-link">徵才資訊</p>
+                    <p class="footer-link">活動消息</p>
                 </div>
-                <div class="col-12 col-md-6">
-                    <p><i class="fa fa-facebook-official sr-contact"></i> <a href="https://www.facebook.com/DevOpsTaiwan/">DevOps
+                <div class="col-12 col col-md-4">
+                    <h4>其他相關連結</h4>
+                    <p class="footer-link">講題投稿</p>
+                    <p class="footer-link">贊助與合作</p>
+                    <p class="footer-link">DEVOPS CHECKLIST</p>
+                    <p class="footer-link">DEVOPS DAYS TAIPEI</p>
+                </div>
+                <div class="col-12 col col-md-4">
+                    <h4>社群媒體</h4>
+                    <p class="footer-link"><i class="fa fa-facebook-official sr-contact"></i> <a class="footer-anchor"
+                            href="https://www.facebook.com/DevOpsTaiwan/">DevOps
                             Taiwan 粉絲專頁</a></p>
-                    <p><i class="fa fa-facebook-official sr-contact"></i> <a href="https://www.facebook.com/groups/DevOpsTaiwan/">DevOps
+                    <p class="footer-link"><i class="fa fa-facebook-official sr-contact"></i> <a class="footer-anchor"
+                            href="https://www.facebook.com/groups/DevOpsTaiwan/">DevOps
                             Taiwan 社團</a></p>
-                    <p><i class="fa fa-youtube  sr-contact"></i> <a href="https://www.youtube.com/channel/UC401Z2pUq-Y37ayeeSprXSg">DevOps
-                            Taiwan 頻道</a></p>
-                    <p><i class="fa fa-flag-checkered sr-contact"></i> <a href="https://devops.kktix.cc/">KKTIX 報名頁
+                    <p class="footer-link"><i class="fa fa-flag-checkered sr-contact"></i> <a class="footer-anchor"
+                            href="https://devops.kktix.cc/">KKTIX 報名頁
                             (Meetup 報名頁)</a></p>
+                    <p class="footer-link"><i class="fa fa-youtube  sr-contact"></i> <a class="footer-anchor" href="https://www.youtube.com/channel/UC401Z2pUq-Y37ayeeSprXSg">DT
+                            頻道</a></p>
+
                 </div>
-                <div class="col col-md-6"></div>
             </div>
         </div>
         </section>
@@ -426,15 +576,6 @@
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
-
-        <!-- Plugin JavaScript -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> -->
-
-        <!-- Theme JavaScript -->
-        <!-- <script src="js/creative.min.js"></script> -->
-
         <script>
             (function ($) {
                 "use strict";
