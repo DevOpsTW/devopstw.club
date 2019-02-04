@@ -46,8 +46,7 @@
     <!-- <link href="css/creative.css" rel="stylesheet"> -->
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -67,6 +66,89 @@
     <![endif]-->
     <style>
         @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&subset=chinese-traditional');
+
+        @media (min-width: 768px) {
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner
+  .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner
+  .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+  + .carousel-item,
+  .carousel-inner
+  .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+  + .carousel-item
+  + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner
+  .active.carousel-item
+  + .carousel-item
+  + .carousel-item
+  + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left
+  + .carousel-item
+  + .carousel-item
+  + .carousel-item {
+    position: relative;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right
+  + .carousel-item
+  + .carousel-item
+  + .carousel-item {
+    position: relative;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+str
+
 
         * {
             margin: 0;
@@ -118,12 +200,6 @@
     overflow:hidden;
 }
 
-        /* smoother transitions */
-.carousel-inner>.carousel-item.next.left,
-.carousel-inner>.carousel-item.prev.right,
-{
-    transition: all 1s ease;
-}
     .hot-link{
 
     }
@@ -278,6 +354,10 @@ footer{
 }
 
 @media (max-width: 542px) {
+    .container{
+        padding-right: unset;
+        padding-left: unset;
+    }
     .no-moblie{
     display: none;
 }
@@ -322,10 +402,6 @@ footer{
         padding-top: 10px;
     }
 }
-
-
-
-
 </style>
 </head>
 
@@ -398,22 +474,22 @@ footer{
                     <hr class="orange_hr">
                     <div class="activity">
                         <h5>【2019/03/28】DevOps Taiwan Meetup #22 <span class="badge badge-pill new-badge">New</span></h4>
-                        <p>Artifacts Management</p>
+                            <p>Artifacts Management</p>
                     </div>
 
                     <div class="activity">
                         <h5>【2019/04】 DevOps Taiwan Meetup #23 <span class="badge badge-pill new-badge">New</span></h4>
-                        <p>DataOps</p>
+                            <p>DataOps</p>
                     </div>
 
                     <div class="activity">
-                        <h5>【2019/05】 DevOps Taiwan Meetup #24  <span class="badge badge-pill new-badge">New</span></h4>
-                        <p>Feature Toggle</p>
+                        <h5>【2019/05】 DevOps Taiwan Meetup #24 <span class="badge badge-pill new-badge">New</span></h4>
+                            <p>Feature Toggle</p>
                     </div>
 
                     <div class="activity">
                         <h5>【每雙週四的夜間】 SRE 讀書會 (台北) <span class="badge badge-pill new-badge">New</span></h4>
-                        <p>想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
+                            <p>想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
                     </div>
                     <div align="right">
                         <a href="#" class="activity-anchor">更多活動...</a>
@@ -500,75 +576,79 @@ footer{
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row mt-0">
-                <div class="col-lg-12 carousel slide" data-ride="carousel" id="postsCarousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card-deck">
-                                <div class="card">
-                                    <img src="./img/fotos/6.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SRE 讀書會 (台北)</h5>
-                                        <p class="card-text">想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
-                                        <p class="card-text"><small class="text-muted">平均每雙週四的夜間有讀書會</small></p>
-                                        <a href="http://fb.sre.tw" class="btn btn-warning btn-devops">加入SRE臉書社團了解詳情</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img src="./img/fotos/5.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">DevOps Taiwan Meetup #20</h5>
-                                        <p class="card-text">持續測試，如果我可以重來一次</p>
-                                        <p class="card-text"><small class="text-muted">2019/01/21 晚上（台北）</small></p>
-                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img src="./img/fotos/5.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">DevOps Taiwan Meetup #21</h5>
-                                        <p class="card-text">Cloud Native 最新近況分享</p>
-                                        <p class="card-text"><small class="text-muted">預定 2019/02/14 晚上 (台北)</small></p>
-                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                                    </div>
-                                </div>
+        <div class="container-fluid">
+            <div class="carousel slide" data-ride="carousel" id="postsCarousel">
+                <div class="carousel-inner row w-100 mx-auto">
+                    <div class="carousel-item col-md-4 active">
+                        <div class="card">
+                            <img src="./img/fotos/6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">SRE 讀書會 (台北)</h5>
+                                <p class="card-text">想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
+                                <p class="card-text"><small class="text-muted">平均每雙週四的夜間有讀書會</small></p>
+                                <a href="http://fb.sre.tw" class="btn btn-warning btn-devops">加入SRE臉書社團了解詳情</a>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="card-deck">
-                                <div class="card">
-                                    <img src="./img/fotos/1.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">DevOps Taiwan Meetup #22</h5>
-                                        <p class="card-text">Artifacts Management</p>
-                                        <p class="card-text"><small class="text-muted">預定 2019/03/28 晚上 (台北)</small></p>
-                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img src="./img/fotos/2.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">DevOps Taiwan Meetup #23</h5>
-                                        <p class="card-text">DataOps</p>
-                                        <p class="card-text"><small class="text-muted">四月預定 (台北)</small></p>
-                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img src="./img/fotos/3.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">DevOps Taiwan Meetup #24</h5>
-                                        <p class="card-text">Feature Toggle</p>
-                                        <p class="card-text"><small class="text-muted">五月預定 (台北)</small></p>
-                                        <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img src="./img/fotos/5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">DevOps Taiwan Meetup #20</h5>
+                                <p class="card-text">持續測試，如果我可以重來一次</p>
+                                <p class="card-text"><small class="text-muted">2019/01/21 晚上（台北）</small></p>
+                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img src="./img/fotos/5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">DevOps Taiwan Meetup #21</h5>
+                                <p class="card-text">Cloud Native 最新近況分享</p>
+                                <p class="card-text"><small class="text-muted">預定 2019/02/14 晚上 (台北)</small></p>
+                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img src="./img/fotos/1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">DevOps Taiwan Meetup #22</h5>
+                                <p class="card-text">Artifacts Management</p>
+                                <p class="card-text"><small class="text-muted">預定 2019/03/28 晚上 (台北)</small></p>
+                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img src="./img/fotos/2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">DevOps Taiwan Meetup #23</h5>
+                                <p class="card-text">DataOps</p>
+                                <p class="card-text"><small class="text-muted">四月預定 (台北)</small></p>
+                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img src="./img/fotos/3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">DevOps Taiwan Meetup #24</h5>
+                                <p class="card-text">Feature Toggle</p>
+                                <p class="card-text"><small class="text-muted">五月預定 (台北)</small></p>
+                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -632,7 +712,7 @@ footer{
                 </div>
             </div>
         </div>
-        </section>
+    </footer>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -641,8 +721,33 @@ footer{
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
         <script>
+            $(document).ready(function () {
+                    $("#postsCarousel").on("slide.bs.carousel", function (e) {
+                        var $e = $(e.relatedTarget);
+                        var idx = $e.index();
+                        var itemsPerSlide = 3;
+                        var totalItems = $(".carousel-item").length;
+
+                        if (idx >= totalItems - (itemsPerSlide - 1)) {
+                            var it = itemsPerSlide - (totalItems - idx);
+                            for (var i = 0; i < it; i++) {
+                                // append slides to end
+                                if (e.direction == "left") {
+                                    $(".carousel-item")
+                                        .eq(i)
+                                        .appendTo(".carousel-inner");
+                                } else {
+                                    $(".carousel-item")
+                                        .eq(0)
+                                        .appendTo($(this).find(".carousel-inner"));
+                                }
+                            }
+                        }
+                    });
+                });
             (function ($) {
                 "use strict";
+                
                 $('.next').click(function () { $('.carousel').carousel('next'); return false; });
                 $('.prev').click(function () { $('.carousel').carousel('prev'); return false; });
 
