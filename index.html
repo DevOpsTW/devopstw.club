@@ -352,12 +352,19 @@ footer{
   letter-spacing: normal;
   color: #373a3c;
 }
-
+.is-moblie{
+        display: none; 
+    }
 @media (max-width: 542px) {
     .container{
         padding-right: unset;
         padding-left: unset;
     }
+
+    .is-moblie{
+        display: block; 
+    }
+
     .no-moblie{
     display: none;
 }
@@ -400,6 +407,10 @@ footer{
 
     footer .footer-link{
         padding-top: 10px;
+    }
+
+    .carousel-item{
+        padding: unset;
     }
 }
 </style>
@@ -475,9 +486,9 @@ footer{
 
     <header>
         <div class="container">
-            <div class="row mb-3" style="padding-top: 33px;">
+            <div class="row mb-3 no-moblie" style="padding-top: 33px;">
                 <div class="col-md-6 col-12" align="left">
-                    <div class="hot-link no-moblie">
+                    <div class="hot-link">
                         <h4>熱門連結
                             <span class="badge badge-pill badge-primary link-badge">英雄榜</span>
                             <span class="badge badge-pill badge-primary link-badge">DEVOPS工具大亂鬥</span>
@@ -485,7 +496,7 @@ footer{
                         </h4>
 
                     </div>
-                    <hr class="orange_hr no-moblie">
+                    <hr class="orange_hr">
 
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe id="ad_video" width="400" height="300" src="https://www.youtube.com/embed/hGxdAx7I-Ds?autoplay=1"
@@ -493,7 +504,7 @@ footer{
                             class="embed-responsive-item"></iframe>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 no-moblie" align="left">
+                <div class="col-md-6 col-12" align="left">
                     <h4>最新預吿</h4>
                     <hr class="orange_hr">
                     <div class="activity">
@@ -521,10 +532,32 @@ footer{
 
                 </div>
             </div>
+            <div class="is-moblie">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner row w-100 mx-auto">
+                        <div class="carousel-item col-md-4 active">
+                            <img class="img-fluid" src="img/fotos/1.jpg" alt="Card image cap">
+                        </div>
+                        <div class="carousel-item col-md-4">
+                            <img class="img-fluid" src="img/fotos/2.jpg" alt="Card image cap">
+                        </div>
+                        <div class="carousel-item col-md-4">
+                            <img class="img-fluid" src="img/fotos/3.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                </div>
+            </div>
             <div class="row">
                 <div class="col">
                     <h2 class="about-us">關於我們 DEVOPS TAIWAN</h2>
-
                 </div>
             </div>
         </div>
