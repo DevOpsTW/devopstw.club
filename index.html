@@ -406,6 +406,30 @@ footer{
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v3.2'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="1442999589110266" theme_color="#20cef5"
+        logged_in_greeting="歡迎光臨 DevOps Taiwan，有什麼我們可以為您服務的嗎？" logged_out_greeting="歡迎光臨 DevOps Taiwan，有什麼我們可以為您服務的嗎？">
+    </div>
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#page-top">
             <img src="./img/nav_icon.png" width="80" height="80" class="d-inline-block" alt="">
@@ -541,7 +565,7 @@ footer{
                     <a href="http://cfs.devopstw.club/" class="btn btn-warning btn-devops">一同發起</a>
                 </div>
                 <div class="col-3" style="left: -10px;">
-                    <img src="./img/block-2.png" class="img-fuild devops-icon" >
+                    <img src="./img/block-2.png" class="img-fuild devops-icon">
                 </div>
             </div>
         </div>
@@ -714,45 +738,45 @@ footer{
         </div>
     </footer>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-            crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function () {
-                    $("#postsCarousel").on("slide.bs.carousel", function (e) {
-                        var $e = $(e.relatedTarget);
-                        var idx = $e.index();
-                        var itemsPerSlide = 3;
-                        var totalItems = $(".carousel-item").length;
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#postsCarousel").on("slide.bs.carousel", function (e) {
+                var $e = $(e.relatedTarget);
+                var idx = $e.index();
+                var itemsPerSlide = 3;
+                var totalItems = $(".carousel-item").length;
 
-                        if (idx >= totalItems - (itemsPerSlide - 1)) {
-                            var it = itemsPerSlide - (totalItems - idx);
-                            for (var i = 0; i < it; i++) {
-                                // append slides to end
-                                if (e.direction == "left") {
-                                    $(".carousel-item")
-                                        .eq(i)
-                                        .appendTo(".carousel-inner");
-                                } else {
-                                    $(".carousel-item")
-                                        .eq(0)
-                                        .appendTo($(this).find(".carousel-inner"));
-                                }
-                            }
+                if (idx >= totalItems - (itemsPerSlide - 1)) {
+                    var it = itemsPerSlide - (totalItems - idx);
+                    for (var i = 0; i < it; i++) {
+                        // append slides to end
+                        if (e.direction == "left") {
+                            $(".carousel-item")
+                                .eq(i)
+                                .appendTo(".carousel-inner");
+                        } else {
+                            $(".carousel-item")
+                                .eq(0)
+                                .appendTo($(this).find(".carousel-inner"));
                         }
-                    });
-                });
-            (function ($) {
-                "use strict";
-                
-                $('.next').click(function () { $('.carousel').carousel('next'); return false; });
-                $('.prev').click(function () { $('.carousel').carousel('prev'); return false; });
+                    }
+                }
+            });
+        });
+        (function ($) {
+            "use strict";
 
-            })(jQuery);
-        </script>
+            $('.next').click(function () { $('.carousel').carousel('next'); return false; });
+            $('.prev').click(function () { $('.carousel').carousel('prev'); return false; });
+
+        })(jQuery);
+    </script>
 </body>
 
 </html>
