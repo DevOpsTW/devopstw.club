@@ -18,3 +18,6 @@
 - [社群入口網頁](https://devopstw.club)
 - [講題投稿](http://cfs.devopstw.club)
 - [贊助及合作提案](http://sponsor.devopstw.club)
+
+
+目前官網採用的是由 [Colorlib](https://colorlib.com/wp/template/edusite/) 提供的免費 template。(Licence: CC BY 3.0)

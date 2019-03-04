@@ -1,815 +1,572 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133680862-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-133680862-1');
-    </script>
-
-
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="DevOps Taiwan 社群成立于 2015/5/21，由多位關注 DevOps 相關資訊的 IT、軟體界朋友一起共同創立，期望透過社群互動的方式建立一個平台提供台灣的社群朋友可以一起針對 DevOps 相關的議題、專案、技術與工作進行分享與交流。">
-    <meta property="og:image" content="http://devopstw.club/img/fotos/5.jpg">
-    <meta property="og:url" content="http://devopstw.club">
-    <meta property="og:description" content="DevOps Taiwan 社群成立于 2015/5/21，由多位關注 DevOps 相關資訊的 IT、軟體界朋友一起共同創立，期望透過社群互動的方式建立一個平台提供台灣的社群朋友可以一起針對 DevOps 相關的議題、專案、技術與工作進行分享與交流。">
-    <meta property="og:site_name" content="DevOps Taiwan Community | DevOps 台灣社群">
-
-    <title>DevOps Taiwan Community | DevOps 台灣社群</title>
-
-    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-    <link rel="manifest" href="icon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Theme CSS -->
-    <!-- <link href="css/creative.css" rel="stylesheet"> -->
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-        rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
-        rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&subset=chinese-traditional');
-
-        @media (min-width: 768px) {
-  /* show 3 items */
-  .carousel-inner .active,
-  .carousel-inner .active + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item {
-    display: block;
-  }
-
-  .carousel-inner
-  .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-  .carousel-inner
-  .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
-  + .carousel-item,
-  .carousel-inner
-  .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
-  + .carousel-item
-  + .carousel-item {
-    transition: none;
-  }
-
-  .carousel-inner .carousel-item-next,
-  .carousel-inner .carousel-item-prev {
-    position: relative;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-
-  .carousel-inner
-  .active.carousel-item
-  + .carousel-item
-  + .carousel-item
-  + .carousel-item {
-    position: absolute;
-    top: 0;
-    right: -33.3333%;
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-
-  /* left or forward direction */
-  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-  .carousel-item-next.carousel-item-left + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left
-  + .carousel-item
-  + .carousel-item
-  + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-
-  /* farthest right hidden item must be abso position for animations */
-  .carousel-inner .carousel-item-prev.carousel-item-right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-
-  /* right or prev direction */
-  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-  .carousel-item-prev.carousel-item-right + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-  .carousel-item-prev.carousel-item-right
-  + .carousel-item
-  + .carousel-item
-  + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    display: block;
-    visibility: visible;
-  }
-}
-str
-
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-       .pointer  img {
-            display: inline-block;
-            animation: myfirst 0.5s infinite;
-        }
-        
-        .pointer {
-            width: 50%;
-            text-align: center;
-        }
-
-        @keyframes myfirst {
-            0% {
-                transform: translate(0px, 0px);
-            }
-            50% {
-                transform: translate(0px, -10px);
-            }
-            100% {
-                transform: translate(0px, 0px);
-            }
-        }
-
-
-
-
-        .container, .row{
-            width: 100% !important;
-            max-width: unset;
-            margin: 0 auto;
-        }
-
-        .dropdown-menu{
-            left: -100px;
-        }
-
-        #ad_video, #ad_word{
-            float: left;
-        }
-
-        /* control image height */
-.card-img-top-250 {
-    max-height: 250px;
-    overflow:hidden;
-}
-
-    .hot-link{
-
-    }
-
-    .orange_hr{
-        background-color: #f76e10;
-        max-width: 100%;
-    }
-    .link-badge{
-  font-size: 12px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  color: #ffffff;
-  background-color: #5bc0de;
-}
-header{
-    background-color: #555555;
-    color: white;
-    text-align: center;
-}
-
-#meetup{
-    background-color: #555555;
-    padding-top: 40px;
-    padding-bottom: 60px;
-}
-
-.meetup-heading{
-    color: white;
-}
-
-#about{
-    background-image: url('./img/header.jpg'); 
-    background-size: 100% 400px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#service{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 50px;
-    padding-right:  50px;
-}
-
-#portfolio{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 50px;
-    padding-right:  50px;
-}
-
-.footer-link{
-    padding-top: 29px;
-    font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.14;
-  letter-spacing: normal;
-}
-
-footer{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 50px;
-    padding-right:  50px;
-}
-.footer-anchor{
-    color: white;
-}
-
-.footer-anchor:hover{
-    color: #f76e10;
-}
-
-.activity-anchor{
-    color: #f76e10;
-}
-
-.activity-anchor:hover{
-    color: #f76e10;
-}
-.service-block{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.service-block p{
-    font-size: 20px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  color: #373a3c;
-}
-
-.btn-devops{
-    background-color: #ec971f;
-    color: white;
-}
-
-.about-us{
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
-
-.new-badge{
-    background-color: #f76e10;
-    color: white;
-    border-radius: 4px;
-}
-
-.activity span.new-badge{
-    margin-left: 15px;
-}
-
-
-.main-title{
-    font-size: 34px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.35;
-  letter-spacing: normal;
-  color: #535455;
-  margin-bottom: 0;
-}
-
-.sub-title{
-    font-size: 17px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  color: #f76e10;
-  margin-bottom: 0;
-}
-
-.nav-item{
-    font-size: 20px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.25;
-  letter-spacing: normal;
-  color: #373a3c;
-}
-.is-moblie{
-        display: none; 
-    }
-@media (max-width: 542px) {
-    .container{
-        padding-right: unset;
-        padding-left: unset;
-    }
-
-    .is-moblie{
-        display: block; 
-    }
-
-    .no-moblie{
-    display: none;
-}
-
-    .devops-img{
-        width: 263px;
-    }
-
-    .devops-icon{
-        width: 80px;
-    }
-
-    #service{
-        padding: unset;
-    }
-
-    .service-block h2{
-        font-size: 17px;
-    }
-
-    .service-block p{
-        font-size: 12px;
-    }
-    .main-title{
-        font-size: 17px;
-    }
-
-    .sub-title{
-        font-size: 13px;
-    }
-
-    .navbar-brand img {
-        width: 40px;
-        height: 40px;
-    }
-
-    footer{
-        padding: unset;
-    }
-
-    footer .footer-link{
-        padding-top: 10px;
-    }
-
-    .carousel-item{
-        padding: unset;
-    }
-}
-</style>
-</head>
-
-<body>
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                xfbml: true,
-                version: 'v3.2'
-            });
-        };
-
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat" attribution=setup_tool page_id="1442999589110266" theme_color="#20cef5"
-        logged_in_greeting="歡迎光臨 DevOps Taiwan，有什麼我們可以為您服務的嗎？" logged_out_greeting="歡迎光臨 DevOps Taiwan，有什麼我們可以為您服務的嗎？">
-    </div>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#page-top">
-            <img src="./img/nav_icon.png" width="80" height="80" class="d-inline-block" alt="">
-        </a>
-        <a class="navbar-brand">
-            <p class="main-title">DEVOPS TAIWAN</p>
-            <p class="sub-title">持續整合 優秀人才</p>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbarNav" class="collapse navbar-collapse" style="justify-content: flex-end;">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">活動消息</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">關於我們</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">歷史沿革</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/DevOpsTW/jobs/issues">徵才資訊</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        其他相關
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="http://cfs.devopstw.club/">講題投稿</a>
-                        <a class="dropdown-item" href="http://sponsor.devopstw.club/">贊助與合作</a>
-                        <a class="dropdown-item" href="https://devopstw.club/devops-checklist.html">DEVOPS CHECKLIST</a>
-                        <a class="dropdown-item" href="https://devopsdays.tw/">DEVOPS DAYS TAIPEI</a>
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
-
-    <header>
-        <div class="container">
-            <div class="row mb-3 no-moblie" style="padding-top: 33px;">
-                <div class="col-md-6 col-12" align="left">
-                    <div class="hot-link">
-                        <h4>熱門連結
-                            <span class="badge badge-pill badge-primary link-badge">英雄榜</span>
-                            <span class="badge badge-pill badge-primary link-badge">DEVOPS工具大亂鬥</span>
-                            <span class="badge badge-pill badge-primary link-badge">志工戰隊</span>
-                        </h4>
-
-                    </div>
-                    <hr class="orange_hr">
-
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe id="ad_video" width="400" height="300" src="https://www.youtube.com/embed/hGxdAx7I-Ds?autoplay=1"
-                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            class="embed-responsive-item"></iframe>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12" align="left">
-                    <h4>最新預吿</h4>
-                    <hr class="orange_hr">
-                    <div class="activity">
-                        <h5>【2019/03/28】DevOps Taiwan Meetup #22 <span class="badge badge-pill new-badge">New</span></h4>
-                            <p>Artifacts Management</p>
-                    </div>
-
-                    <div class="activity">
-                        <h5>【2019/04】 DevOps Taiwan Meetup #23 <span class="badge badge-pill new-badge">New</span></h4>
-                            <p>DataOps</p>
-                    </div>
-
-                    <div class="activity">
-                        <h5>【2019/05】 DevOps Taiwan Meetup #24 <span class="badge badge-pill new-badge">New</span></h4>
-                            <p>Feature Toggle</p>
-                    </div>
-
-                    <div class="activity">
-                        <h5>【每雙週四的夜間】 SRE 讀書會 (台北) <span class="badge badge-pill new-badge">New</span></h4>
-                            <p>想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
-                    </div>
-                    <div align="right">
-                        <a href="#" class="activity-anchor">更多活動...</a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="is-moblie">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner row w-100 mx-auto">
-                        <div class="carousel-item col-md-4 active">
-                            <img class="img-fluid" src="img/fotos/1.jpg" alt="Card image cap">
-                        </div>
-                        <div class="carousel-item col-md-4">
-                            <img class="img-fluid" src="img/fotos/2.jpg" alt="Card image cap">
-                        </div>
-                        <div class="carousel-item col-md-4">
-                            <img class="img-fluid" src="img/fotos/3.jpg" alt="Card image cap">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                          </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2 class="about-us">關於我們 DEVOPS TAIWAN</h2>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col" align="center">
-                    <div class="pointer"><img src="./img/point-down.png"></div>
-
-                    <img src="./img/devop-t.png" class="img-fuild devops-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="service">
-        <div class="container">
-            <div class="row service-block">
-                <div class="col-3">
-                    <img src="./img/block-1.png" class="img-fuild devops-icon">
-                </div>
-                <div class="col-9">
-                    <h2>組織戰隊</h2>
-                    <p>Devops Taiwan 集結各界好手，組織志工、人才戰隊，翻譯經典著作、進行各項議題研討，培養經驗與戰鬥力，當然還不忘帶著歡樂積極的態度！</p>
-                    <p>歡迎你一起加入 「DevopsT 戰隊」</p>
-                    <button type="button" class="btn btn-warning btn-devops">加入戰隊</button>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row service-block">
-                <div class="col-9" align="right">
-                    <h2>活動發起</h2>
-                    <p>由 DevopsT 戰隊共同發起各種知識與樂趣兼具的活動，帶動Devops的精神，並且促進業界交流，共同凝聚人才分享、協作，持續整合！</p>
-                    <a href="http://cfs.devopstw.club/" class="btn btn-warning btn-devops">一同發起</a>
-                </div>
-                <div class="col-3" style="left: -10px;">
-                    <img src="./img/block-2.png" class="img-fuild devops-icon">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row service-block">
-                <div class="col-3">
-                    <img src="./img/block-3.png" class="img-fuild devops-icon">
-                </div>
-                <div class="col-9">
-                    <h2>多元合作結盟-持續整合 優秀人才</h2>
-                    <p>透過 DevopsT 戰隊的戰力培養、蓄積實力，吸引及邀請更多好手強強合作，為台灣 IT 產業創造更多元、豐富的價值！</p>
-                    <p>邀請你一起參與各項提案、文章撰寫、贊助，「多元合作結盟」強強聯手！</p>
-                    <a href="http://sponsor.devopstw.club/" class="btn btn-warning btn-devops">馬上強強聯手</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="meetup">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <h2 class="meetup-heading">活動及花絮</h2>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-md-right lead">
-                    <a class="btn btn-outline-secondary prev" href="" title="go back"><i class="fa fa-lg fa-chevron-left"></i></a>
-                    <a class="btn btn-outline-secondary next" href="" title="more"><i class="fa fa-lg fa-chevron-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="carousel slide" data-ride="carousel" id="postsCarousel">
-                <div class="carousel-inner row w-100 mx-auto">
-                    <div class="carousel-item col-md-4 active">
-                        <div class="card">
-                            <img src="./img/fotos/6.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">SRE 讀書會 (台北)</h5>
-                                <p class="card-text">想知道 DevOps 的下一步嗎？趕快加入 SRE 社群並了解 SRE 的趨勢</p>
-                                <p class="card-text"><small class="text-muted">平均每雙週四的夜間有讀書會</small></p>
-                                <a href="http://fb.sre.tw" class="btn btn-warning btn-devops">加入SRE臉書社團了解詳情</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item col-md-4">
-                        <div class="card">
-                            <img src="./img/fotos/5.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">DevOps Taiwan Meetup #20</h5>
-                                <p class="card-text">持續測試，如果我可以重來一次</p>
-                                <p class="card-text"><small class="text-muted">2019/01/21 晚上（台北）</small></p>
-                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item col-md-4">
-                        <div class="card">
-                            <img src="./img/fotos/5.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">DevOps Taiwan Meetup #21</h5>
-                                <p class="card-text">Cloud Native 最新近況分享</p>
-                                <p class="card-text"><small class="text-muted">預定 2019/02/14 晚上 (台北)</small></p>
-                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item col-md-4">
-                        <div class="card">
-                            <img src="./img/fotos/1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">DevOps Taiwan Meetup #22</h5>
-                                <p class="card-text">Artifacts Management</p>
-                                <p class="card-text"><small class="text-muted">預定 2019/03/28 晚上 (台北)</small></p>
-                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item col-md-4">
-                        <div class="card">
-                            <img src="./img/fotos/2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">DevOps Taiwan Meetup #23</h5>
-                                <p class="card-text">DataOps</p>
-                                <p class="card-text"><small class="text-muted">四月預定 (台北)</small></p>
-                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item col-md-4">
-                        <div class="card">
-                            <img src="./img/fotos/3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">DevOps Taiwan Meetup #24</h5>
-                                <p class="card-text">Feature Toggle</p>
-                                <p class="card-text"><small class="text-muted">五月預定 (台北)</small></p>
-                                <a href="#" class="btn btn-warning btn-devops">KKTIX</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="no-moblie">
-        <div class="container">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/fotos/1.jpg" class="img-responsive" width="388">
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/fotos/2.jpg" class="img-responsive" width="388">
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/fotos/3.jpg" class="img-responsive" width="388">
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/fotos/4.jpg" class="img-responsive" width="388">
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/fotos/5.jpg" class="img-responsive" width="388">
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/fotos/6.jpg" class="img-responsive" width="388">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" style="background: #555; color:#ffffff">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4  no-moblie">
-                    <h4>站內連結</h4>
-                    <p class="footer-link">關於我們</p>
-                    <p class="footer-link">歷史沿革</p>
-                    <p class="footer-link"><a class="footer-anchor" href="https://github.com/DevOpsTW/jobs/issues">徵才資訊</a></p>
-                    <p class="footer-link">活動消息</p>
-                </div>
-                <div class="col-12 col col-md-4">
-                    <h4>其他相關連結</h4>
-                    <p class="footer-link"><a class="footer-anchor" href="http://cfs.devopstw.club/">講題投稿</a></p>
-                    <p class="footer-link"><a class="footer-anchor" href="http://sponsor.devopstw.club/">贊助與合作</a></p>
-                    <p class="footer-link"><a class="footer-anchor" href="https://devopstw.club/devops-checklist.html">DEVOPS
-                            CHECKLIST</a></p>
-                    <p class="footer-link"><a class="footer-anchor" href="https://devopsdays.tw/">DEVOPS DAYS TAIPEI</a></p>
-                </div>
-                <div class="col-12 col col-md-4">
-                    <h4>社群媒體</h4>
-                    <p class="footer-link"><i class="fa fa-facebook-official sr-contact"></i> <a class="footer-anchor"
-                            href="https://www.facebook.com/DevOpsTaiwan/">DevOps
-                            Taiwan 粉絲專頁</a></p>
-                    <p class="footer-link"><i class="fa fa-facebook-official sr-contact"></i> <a class="footer-anchor"
-                            href="https://www.facebook.com/groups/DevOpsTaiwan/">DevOps
-                            Taiwan 社團</a></p>
-                    <p class="footer-link"><i class="fa fa-flag-checkered sr-contact"></i> <a class="footer-anchor"
-                            href="https://devops.kktix.cc/">KKTIX 報名頁
-                            (Meetup 報名頁)</a></p>
-                    <p class="footer-link"><i class="fa fa-youtube  sr-contact"></i> <a class="footer-anchor" href="https://www.youtube.com/channel/UC401Z2pUq-Y37ayeeSprXSg">DT
-                            頻道</a></p>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-            $("#postsCarousel").on("slide.bs.carousel", function (e) {
-                var $e = $(e.relatedTarget);
-                var idx = $e.index();
-                var itemsPerSlide = 3;
-                var totalItems = $(".carousel-item").length;
-
-                if (idx >= totalItems - (itemsPerSlide - 1)) {
-                    var it = itemsPerSlide - (totalItems - idx);
-                    for (var i = 0; i < it; i++) {
-                        // append slides to end
-                        if (e.direction == "left") {
-                            $(".carousel-item")
-                                .eq(i)
-                                .appendTo(".carousel-inner");
-                        } else {
-                            $(".carousel-item")
-                                .eq(0)
-                                .appendTo($(this).find(".carousel-inner"));
-                        }
-                    }
-                }
-            });
-        });
-        (function ($) {
-            "use strict";
-
-            $('.next').click(function () { $('.carousel').carousel('next'); return false; });
-            $('.prev').click(function () { $('.carousel').carousel('prev'); return false; });
-
-        })(jQuery);
-    </script>
-</body>
-
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133680862-1"></script>
+		<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+				gtag('config', 'UA-133680862-1');
+		</script>
+		<meta name="description" content="DevOps Taiwan 社群成立于 2015/5/21，由多位關注 DevOps 相關資訊的 IT、軟體界朋友一起共同創立，期望透過社群互動的方式建立一個平台提供台灣的社群朋友可以一起針對 DevOps 相關的議題、專案、技術與工作進行分享與交流。">
+		<meta property="og:image" content="http://devopstw.club/img/fotos/5.jpg">
+		<meta property="og:url" content="http://devopstw.club">
+		<meta property="og:description" content="DevOps Taiwan 社群成立于 2015/5/21，由多位關注 DevOps 相關資訊的 IT、軟體界朋友一起共同創立，期望透過社群互動的方式建立一個平台提供台灣的社群朋友可以一起針對 DevOps 相關的議題、專案、技術與工作進行分享與交流。">
+		<meta property="og:site_name" content="DevOps Taiwan Community | DevOps 台灣社群">
+
+		<title>DevOps Taiwan Community | DevOps 台灣社群</title>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+
+  </head>
+	<body>
+		<!-- Load Facebook SDK for JavaScript -->
+		    <div id="fb-root"></div>
+		    <script>
+		        window.fbAsyncInit = function () {
+		            FB.init({
+		                xfbml: true,
+		                version: 'v3.2'
+		            });
+		        };
+
+		        (function (d, s, id) {
+		            var js, fjs = d.getElementsByTagName(s)[0];
+		            if (d.getElementById(id)) return;
+		            js = d.createElement(s); js.id = id;
+		            js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+		            fjs.parentNode.insertBefore(js, fjs);
+		        }(document, 'script', 'facebook-jssdk'));</script>
+
+		    <!-- Your customer chat code -->
+		    <div class="fb-customerchat" attribution=setup_tool page_id="1442999589110266" theme_color="#20cef5"
+		        logged_in_greeting="歡迎光臨 DevOps Taiwan，有什麼我們可以為您服務的嗎？" logged_out_greeting="歡迎光臨 DevOps Taiwan，有什麼我們可以為您服務的嗎？">
+		    </div>
+
+		<!-- Header -->
+		<header id="header" class="transparent-nav">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/devops_logo-alt.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<!-- Navigation -->
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="#meetup">活動資訊</a></li>
+						<li><a href="#about">關於我們</a></li>
+						<li><a href="https://github.com/DevOpsTW/jobs/issues">徵才資訊</a></li>
+						<li><a href="http://cfs.devopstw.club/">投稿</a></li>
+						<li><a href="http://sponsor.devopstw.club/">贊助與合作</a></li>
+						<li><a href="https://devopstw.club/devops-checklist.html">DevOps Checklist</a></li>
+						<li><a href="https://devopsdays.tw">DevOpsDays Taipei</a></li>
+					</ul>
+				</nav>
+				<!-- /Navigation -->
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Home -->
+		<div id="home" class="hero-area">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/header.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="home-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<h1 class="white-text">DevOps Taiwan Community</h1>
+							<p class="lead white-text">建立屬於 DevOps 實踐家的互助交流社群空間！</p>
+							<a class="main-button icon-button" href="http://fb.devopstw.club">立即前往 Facebook 社團</a>
+							<a class="main-button icon-button" href="http://fb.devopstw.club">關於 DevOps Taiwan Community</a>
+							<a class="main-button icon-button" href="#meetup">最新活動預告</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Home -->
+
+		<!-- About -->
+		<div id="about" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="section-header">
+							<h2>關於 DevOps Taiwan Community</h2>
+							<p class="lead">創建互助、互信、互利的 DevOps 社群空間！</p>
+						</div>
+
+						<!-- feature -->
+						<div class="feature">
+							<img src="./img/about-1.png" class="feature-icon">
+							<div class="feature-content">
+								<h4>組織戰隊</h4>
+								<p>DevOps Taiwan 集結各界好手，組織志工、人才，翻譯經典著作、進行各項議題研討，培養經驗與戰鬥力，當然還不忘帶著歡樂積極的態度！</p>
+								<a href="http://cfs.devopstw.club/" class="btn btn-info">加入我們</a>
+							</div>
+						</div>
+						<!-- /feature -->
+
+						<!-- feature -->
+						<div class="feature">
+							<img src="./img/about-2.png" class="feature-icon">
+							<div class="feature-content">
+								<h4>發起活動</h4>
+								<p>由 DevOps Taiwan 志工戰隊共同發起各種知識與樂趣兼具的活動，帶動 DevOps 的精神，並且促進業界交流，共同凝聚人才分享、協作，持續整合！</p>
+                <a href="http://cfs.devopstw.club/" class="btn btn-info">一同發起</a>
+							</div>
+						</div>
+						<!-- /feature -->
+
+						<!-- feature -->
+						<div class="feature">
+							<img src="./img/about-3.png" class="feature-icon">
+							<div class="feature-content">
+								<h4>多元合作結盟</h4>
+                <p>社群互動、人才匯集，來自社群好手多方合作，為台灣 IT 產業創造更多元、豐富的價值！邀請您一起參與各項提案、文章撰寫、贊助，「多元合作結盟」強強聯手！</p>
+                <a href="http://sponsor.devopstw.club/" class="btn btn-info">即刻聯手</a>
+							</div>
+						</div>
+						<!-- /feature -->
+
+					</div>
+
+					<div class="col-md-6">
+						<div class="about-img">
+							<img src="./img/about-devops-taiwan.png" alt="">
+						</div>
+					</div>
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /About -->
+
+		<!-- Courses -->
+		<div id="meetup"></div>
+		<div id="courses" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+					<div class="section-header text-center">
+						<h2>最新活動資訊</h2>
+						<p class="lead">DevOps Taiwan 平均每個月都會舉辦一場活動，歡迎隨時關注我們的最新活動資訊！</p>
+					</div>
+				</div>
+				<!-- /row -->
+
+				<!-- courses -->
+				<div id="courses-wrapper">
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="http://fb.sre.tw" class="course-img">
+									<img src="./img/event-sre.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="http://fb.sre.tw">SRE 讀書會 Round 3</a>
+								<p>平均每隔雙週四的夜間舉辦</p>
+								<p>歡迎 SRE 或對 SRE 有興趣者加入！</p>
+								<div class="course-details">
+									<span class="course-category">讀書會</span>
+									<span class="course-price course-free">邀請制 / 免費</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/event-meetup.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Meetup #22 - Artifacts Management</a>
+								<p>2019/03/28 19:30 ~ 21:00</p>
+								<p>雙講師與你分享何為「產出物管理」！</p>
+								<div class="course-details">
+									<span class="course-category">Meetup</span>
+									<span class="course-price course-premium">KKTIX 購票 / 150</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/event-workshop.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Prometheus 工作坊</a>
+								<p>2019/04/13 14:00 ~ 18:00</p>
+								<p>Taipei HashiCorp User Group 合辦</p>
+								<div class="course-details">
+									<span class="course-category">Workshop</span>
+									<span class="course-price course-premium">購票頁面準備中</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/event-battle.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">CI / CD / DevOps Pipeline Tools 大亂鬥</a>
+								<p>2019/04/20 13:30 ~ 18:00</p>
+								<p>想知道哪個 CI / CD Tools 最適合你？</p>
+								<div class="course-details">
+									<span class="course-category">大亂鬥</span>
+									<span class="course-price course-premium">購票頁面準備中</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/event-meetup.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">台中 Meetup - DataOps</a>
+								<p>2019/05/25 下午</p>
+								<p>Agile Taichung 合辦</p>
+								<div class="course-details">
+									<span class="course-category">Meetup</span>
+									<span class="course-price course-premium">購票頁面準備中</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/event-workshop.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Vault 工作坊</a>
+								<p>2019/06/01 13:00 ~ 17:00</p>
+								<p>Taipei HashiCorp User Group 合辦</p>
+								<div class="course-details">
+									<span class="course-category">Workshop</span>
+									<span class="course-price course-premium">購票頁面準備中</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/event-meetup.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">高雄 Meetup - DataOps</a>
+								<p>2019/06/22 下午</p>
+								<p>Agile Kaohsiung 合辦</p>
+								<div class="course-details">
+									<span class="course-category">Meetup</span>
+									<span class="course-price course-premium">購票頁面準備中</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="./img/event-devopsdays.jpg" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">DevOpsDays Taipei 2019</a>
+								<p>2019/10/16 ~ 18</p>
+								<p>一年一度的 DevOps 盛會</p>
+								<div class="course-details">
+									<span class="course-category">Conference</span>
+									<span class="course-price course-premium">購票頁面準備中</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+				</div>
+				<!-- /courses -->
+
+				<!-- <div class="row">
+					<div class="center-btn">
+						<a class="main-button icon-button" href="#">More Courses</a>
+					</div>
+				</div> -->
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Courses -->
+
+		<!-- Call To Action -->
+		<div id="cta" class="section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/sponsor-background.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<h2 class="white-text">贊助與合作提案</h2>
+						<p class="lead white-text">DevOps Taiwan Community 由多位志工共同經營，我們對於各種合作提案皆採取開放態度，歡迎有興趣的朋友與我們聯繫，共同舉辦各式各樣與 DevOps 主題相關之活動。</p>
+						<a class="main-button icon-button" href="http://sponsor.devopstw.club/">贊助與合作提案</a>
+					</div>
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Call To Action -->
+
+		<!-- Why us -->
+		<div id="why-us" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<h3>Our DevOps Journey</h3>
+						<p class="lead">The Road to DevOps.</p>
+						<p>一段旅程，一個故事！DevOps Taiwan Community 邀請您分享屬於您的 DevOps Journey。
+							Our DevOps Journey 是由 DevOps Taiwan Community 發起的訪談計畫，
+							期盼透過各個 DevOps 實踐家的經驗分享，讓更多人知道在這條邁向 DevOps 的旅程中，你我並不孤單！</p>
+						<p>歡迎加入計畫，分享您的 DevOps 之旅！</p>
+						<a class="main-button icon-button" href="http://cfs.devopstw.club">我要分享！</a>
+					</div>
+
+					<div class="col-md-5 col-md-offset-1">
+						<iframe id="ad_video" width="420" height="300"
+                    src="https://www.youtube.com/embed/videoseries?list=PLASszPOhSouo90IxQgEC1fnH48U0ikHRp"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+					</div>
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Why us -->
+
+		<!-- Contact CTA -->
+		<div id="contact-cta" class="section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/header.jpg)"></div>
+			<!-- Backgound Image -->
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<h2 class="white-text">Contact Us</h2>
+						<p class="lead white-text">
+							對於 DevOps Taiwan Community 有任何想法與建議，皆歡迎讓我們知道！<br />
+							你可以直接透過本網頁右下角的 Facebook Messenger 與志工們聯繫！<br />
+							或前往 Facebook 粉絲專頁或社團留言。
+						</p>
+						<a class="main-button icon-button" href="https://www.facebook.com/DevOpsTaiwan/">Contact Us Now</a>
+					</div>
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Contact CTA -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-4">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="./img/devops_logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+					<!-- footer nav -->
+					<div class="col-md-8">
+						<ul class="footer-nav">
+							<li><a href="#meetup">活動資訊</a></li>
+							<li><a href="#about">關於我們</a></li>
+							<li><a href="https://github.com/DevOpsTW/jobs/issues">徵才資訊</a></li>
+							<li><a href="http://cfs.devopstw.club/">投稿</a></li>
+							<li><a href="http://sponsor.devopstw.club/">贊助與合作</a></li>
+							<li><a href="https://devopstw.club/devops-checklist.html">DevOps Checklist</a></li>
+							<li><a href="https://devopsdays.tw">DevOpsDays Taipei</a></li>
+						</ul>
+					</div>
+					<!-- /footer nav -->
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					<!-- social -->
+					<div class="col-md-4 col-md-push-8">
+						<ul class="footer-social">
+							<li><a href="https://www.facebook.com/DevOpsTaiwan/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://www.facebook.com/groups/DevOpsTaiwan/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UC401Z2pUq-Y37ayeeSprXSg" class="youtube"><i class="fa fa-youtube"></i></a></li>
+						</ul>
+					</div>
+					<!-- /social -->
+
+					<!-- copyright -->
+					<div class="col-md-8 col-md-pull-4">
+						<div class="footer-copyright">
+							<span>&copy; Copyright 2019. All Rights Reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com">Colorlib</a></span>
+						</div>
+					</div>
+					<!-- /copyright -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</body>
 </html>
